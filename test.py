@@ -9,6 +9,7 @@ class TestClass(object):
         self.bar = bar
         self.baz = baz
 
+
     @staticmethod
     def fizz_buzz(digit_1, digit_2):
         for i in range(1, 100):
@@ -21,14 +22,7 @@ class TestClass(object):
                 print 'buzz!'
             else:
                 print i
-
-    def oh_this_is_trouble(self, param1, param2):
-        """Oh man this fucntion is trouble"""
-        for i in range(20):
-            print 'trouble' + i * '!'
-            for j in range(10):
-                print i * j
-
+    
     @staticmethod
     def json_to_csv(json_file_path, outfile_path):
         """Convert a file containing a list of flat JSON objects to a csv.
@@ -38,7 +32,6 @@ class TestClass(object):
         """
         with open(json_file_path) as f:
             data = json.load(f)
-        fp = StringIO()
         with open(outfile_path, 'w') as fp:
             writer = csv.writer(fp)
             writer.writerow(data[0].keys())
