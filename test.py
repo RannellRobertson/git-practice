@@ -21,6 +21,26 @@ class TestClass(object):
             else:
                 print i
 
+    #-------First branch 1st commit-----------    
+    def max_min_diff(self, array):
+        max = array[0]
+        min = array[1]
+        for a in array:
+            if a > max:
+                max = a
+            if a < min:
+                min = a
+        return max - min
+    #--------------------------------------
+
+    #-------First branch 2nd commit--------
+    def reversal(self, array):
+        new_array = list()
+        for i in range(len(array),0):
+            new_array.append(array[i])
+        return new_array
+    #--------------------------------------
+    
     def json_to_csv(self, json_file_path, outfile_path):
         """Convert a file containing a list of flat JSON objects to a csv.
 
